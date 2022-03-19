@@ -35,6 +35,7 @@ namespace YY_proje
             this.txtemail = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.txtGöster = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSifreUnuttum
@@ -99,12 +100,20 @@ namespace YY_proje
             this.label3.Text = "Lütfen Şifrenizi Hatırlamak İçin Unuttuğunuz Hesabın ;\r\n Kullanıcı Adı ve e-mail " +
     "Adresini Girin\r\n";
             // 
+            // txtGöster
+            // 
+            this.txtGöster.Location = new System.Drawing.Point(288, 330);
+            this.txtGöster.Name = "txtGöster";
+            this.txtGöster.Size = new System.Drawing.Size(137, 22);
+            this.txtGöster.TabIndex = 10;
+            // 
             // SifremiUnuttum
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtGöster);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtemail);
@@ -126,5 +135,6 @@ namespace YY_proje
         private System.Windows.Forms.TextBox txtemail;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtGöster;
     }
 }

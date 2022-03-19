@@ -36,7 +36,9 @@ namespace YY_proje
                 if (KullanıcıAdı == Sezar.Decryption(reader["KullanıcıAdı"].ToString().TrimEnd(), 2) && e_mail == Sezar.Decryption(reader["e_mail"].ToString().TrimEnd(), 2))
                 {
                     isThere = true;
+                    txtGöster.Text = (Sezar.Decryption(reader["şifre"].ToString().TrimEnd(), 2));
                     break;
+                    
                 }
                 else
                 {
@@ -47,10 +49,8 @@ namespace YY_proje
 
             if (isThere)
             {
-                MessageBox.Show("Şİfrenizi Hatırlamanız İçin Sizi Yönlendiriyoruz !","Program");
-                this.Hide();
-                SifremiUnuttumBilgilerGösterme sifremiUnuttumBilgilerGösterme = new SifremiUnuttumBilgilerGösterme();
-                sifremiUnuttumBilgilerGösterme.Show();
+                MessageBox.Show("Şifreniz Hatırlatıldı !","Program");
+               
             }
             else
             {
