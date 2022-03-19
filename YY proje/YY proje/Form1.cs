@@ -96,5 +96,12 @@ namespace YY_proje
             KayıtForm kayıtForm = new KayıtForm();
             kayıtForm.Show();
         }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            SifremiUnuttum sifremiUnuttum = new SifremiUnuttum();
+            sifremiUnuttum.Show();
+        }
     }
 }

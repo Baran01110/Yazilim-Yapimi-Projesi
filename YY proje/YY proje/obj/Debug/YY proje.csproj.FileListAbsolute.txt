@@ -9,3 +9,4 @@ C:\Users\baran\source\repos\YY proje\YY proje\obj\Debug\YY proje.csproj.CoreComp
 C:\Users\baran\source\repos\YY proje\YY proje\obj\Debug\YY proje.exe
 C:\Users\baran\source\repos\YY proje\YY proje\obj\Debug\YY proje.pdb
 C:\Users\baran\source\repos\YY proje\YY proje\obj\Debug\YY_proje.KayıtForm.resources
+C:\Users\baran\source\repos\YY proje\YY proje\obj\Debug\YY_proje.SifremiUnuttum.resources
