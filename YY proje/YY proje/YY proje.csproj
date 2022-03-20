@@ -58,6 +58,18 @@
     <Compile Include="KayıtForm.Designer.cs">
       <DependentUpon>KayıtForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="OgrenciEkranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgrenciEkranı.Designer.cs">
+      <DependentUpon>OgrenciEkranı.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OgretmenEkranı.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OgretmenEkranı.Designer.cs">
+      <DependentUpon>OgretmenEkranı.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Sezar.cs" />
@@ -72,6 +84,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="KayıtForm.resx">
       <DependentUpon>KayıtForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgrenciEkranı.resx">
+      <DependentUpon>OgrenciEkranı.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OgretmenEkranı.resx">
+      <DependentUpon>OgretmenEkranı.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -67,14 +67,30 @@ namespace YY_proje
 
             while (reader.Read())
             {
-                if (KullanıcıAdı ==Sezar.Decryption (reader["KullanıcıAdı"].ToString().TrimEnd(),2) && şifre == Sezar.Decryption(reader["şifre"].ToString().TrimEnd(),2))
+                if (KullanıcıAdı == Sezar.Decryption (reader["KullanıcıAdı"].ToString().TrimEnd(),2) && şifre == Sezar.Decryption(reader["şifre"].ToString().TrimEnd(),2))
                 {
                     isThere = true;
-                    break;
+                    
+                    if (Sezar.Decryption(reader["şifre"].ToString().TrimEnd(), 2)=="şifre") 
+                    {
+                        this.Hide();
+                        OgretmenEkranı ogretmenEkranı = new OgretmenEkranı();
+                        ogretmenEkranı.Show();
+                        break;
+                    }
+                    
+                    else
+                    {
+                        this.Hide();
+                        OgrenciEkranı ogrenciEkranı = new OgrenciEkranı();
+                        ogrenciEkranı.Show();
+                        break;
+                    }
                 }
                 else
                 {
                     isThere = false;
+                    
                 }
             }
                 connection.Close();
@@ -82,6 +98,7 @@ namespace YY_proje
                 if (isThere)
                 {
                     MessageBox.Show("Başarıyla Giriş Yaptınız !","Program");
+                
                 }
                 else
                 {

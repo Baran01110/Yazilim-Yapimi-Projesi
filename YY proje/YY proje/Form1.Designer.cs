@@ -30,7 +30,7 @@ namespace YY_proje
         private void InitializeComponent()
         {
             this.txtisim = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGiris = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.txtSifre = new System.Windows.Forms.TextBox();
@@ -40,7 +40,7 @@ namespace YY_proje
             // txtisim
             // 
             this.txtisim.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtisim.Location = new System.Drawing.Point(78, 103);
+            this.txtisim.Location = new System.Drawing.Point(272, 112);
             this.txtisim.Name = "txtisim";
             this.txtisim.Size = new System.Drawing.Size(231, 30);
             this.txtisim.TabIndex = 0;
@@ -48,22 +48,22 @@ namespace YY_proje
             this.txtisim.Enter += new System.EventHandler(this.textBox1_Enter);
             this.txtisim.Leave += new System.EventHandler(this.textBox1_Leave);
             // 
-            // button1
+            // btnGiris
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(196, 222);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 65);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Giriş";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnGiris.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnGiris.Location = new System.Drawing.Point(390, 231);
+            this.btnGiris.Name = "btnGiris";
+            this.btnGiris.Size = new System.Drawing.Size(123, 65);
+            this.btnGiris.TabIndex = 2;
+            this.btnGiris.Text = "Giriş";
+            this.btnGiris.UseVisualStyleBackColor = true;
+            this.btnGiris.Click += new System.EventHandler(this.button1_Click);
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel1.Location = new System.Drawing.Point(45, 385);
+            this.linkLabel1.Location = new System.Drawing.Point(251, 377);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(241, 32);
             this.linkLabel1.TabIndex = 3;
@@ -76,7 +76,7 @@ namespace YY_proje
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.linkLabel2.Location = new System.Drawing.Point(46, 262);
+            this.linkLabel2.Location = new System.Drawing.Point(240, 271);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(89, 25);
             this.linkLabel2.TabIndex = 4;
@@ -87,7 +87,7 @@ namespace YY_proje
             // txtSifre
             // 
             this.txtSifre.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSifre.Location = new System.Drawing.Point(78, 154);
+            this.txtSifre.Location = new System.Drawing.Point(272, 163);
             this.txtSifre.Name = "txtSifre";
             this.txtSifre.Size = new System.Drawing.Size(231, 30);
             this.txtSifre.TabIndex = 5;
@@ -115,7 +115,7 @@ namespace YY_proje
             this.Controls.Add(this.txtSifre);
             this.Controls.Add(this.linkLabel2);
             this.Controls.Add(this.linkLabel1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGiris);
             this.Controls.Add(this.txtisim);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -127,7 +127,7 @@ namespace YY_proje
         #endregion
 
         private System.Windows.Forms.TextBox txtisim;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGiris;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.TextBox txtSifre;

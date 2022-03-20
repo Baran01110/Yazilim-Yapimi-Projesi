@@ -36,6 +36,7 @@ namespace YY_proje
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtGöster = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnSifreUnuttum
@@ -102,10 +103,21 @@ namespace YY_proje
             // 
             // txtGöster
             // 
-            this.txtGöster.Location = new System.Drawing.Point(288, 330);
+            this.txtGöster.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtGöster.Location = new System.Drawing.Point(239, 377);
             this.txtGöster.Name = "txtGöster";
-            this.txtGöster.Size = new System.Drawing.Size(137, 22);
+            this.txtGöster.Size = new System.Drawing.Size(234, 30);
             this.txtGöster.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(32, 380);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(201, 25);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "Hatırlatma Şifreniz :";
             // 
             // SifremiUnuttum
             // 
@@ -113,6 +125,7 @@ namespace YY_proje
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.txtGöster);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -136,5 +149,6 @@ namespace YY_proje
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtGöster;
+        private System.Windows.Forms.Label label4;
     }
 }
