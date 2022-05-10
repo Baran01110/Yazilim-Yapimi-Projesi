@@ -104,7 +104,7 @@ namespace YY_proje
             // txtGöster
             // 
             this.txtGöster.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtGöster.Location = new System.Drawing.Point(239, 377);
+            this.txtGöster.Location = new System.Drawing.Point(320, 380);
             this.txtGöster.Name = "txtGöster";
             this.txtGöster.Size = new System.Drawing.Size(234, 30);
             this.txtGöster.TabIndex = 10;

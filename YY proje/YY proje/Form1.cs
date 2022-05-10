@@ -71,7 +71,7 @@ namespace YY_proje
                 {
                     isThere = true;
                     
-                    if (Sezar.Decryption(reader["şifre"].ToString().TrimEnd(), 2)=="şifre") 
+                    if (Sezar.Decryption(reader["şifre"].ToString().TrimEnd(), 2)=="admin12") 
                     {
                         this.Hide();
                         OgretmenEkranı ogretmenEkranı = new OgretmenEkranı();
