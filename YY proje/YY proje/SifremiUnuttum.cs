@@ -59,7 +59,10 @@ namespace YY_proje
 
         }
 
+        private void txtGöster_TextChanged(object sender, EventArgs e)
+        {
 
+        }
     }
 }
 

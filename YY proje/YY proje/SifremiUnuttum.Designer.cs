@@ -108,12 +108,13 @@ namespace YY_proje
             this.txtGöster.Name = "txtGöster";
             this.txtGöster.Size = new System.Drawing.Size(234, 30);
             this.txtGöster.TabIndex = 10;
+            this.txtGöster.TextChanged += new System.EventHandler(this.txtGöster_TextChanged);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(32, 380);
+            this.label4.Location = new System.Drawing.Point(65, 385);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(201, 25);
             this.label4.TabIndex = 11;
