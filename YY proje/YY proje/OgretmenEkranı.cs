@@ -34,12 +34,23 @@ namespace YY_proje
         private void btnKaydet_Click(object sender, EventArgs e)
         {
             connection.Open();
-            SqlCommand command = new SqlCommand("Insert Into Sınav (FilmResim,SoruMetni) values (@p1,@p2)", connection);
+            SqlCommand command = new SqlCommand("Insert Into Sınav (FilmResim,SoruMetni,Soruistenen,A,B,C,D,DogruCevap) values (@p1,@p2,@p3,@p4,@p5,@p6,@p7,@p8)", connection);
             command.Parameters.AddWithValue("@p1", txtResim.Text);
             command.Parameters.AddWithValue("@p2", txtSoruMetni.Text);
+            command.Parameters.AddWithValue("@p3", txtSoruIstenen.Text);
+            command.Parameters.AddWithValue("@p4", txtcvpA.Text);
+            command.Parameters.AddWithValue("@p5", txtcvpB.Text);
+            command.Parameters.AddWithValue("@p6", txtcvpC.Text);
+            command.Parameters.AddWithValue("@p7", txtcvpD.Text);
+            command.Parameters.AddWithValue("@p8", txtDogruCvp.Text);
             command.ExecuteNonQuery();
             connection.Close();
             MessageBox.Show("Kayıt Başarıyla Eklendi...","Program");
+
+        }
+
+        private void OgretmenEkranı_Load(object sender, EventArgs e)
+        {
 
         }
     }

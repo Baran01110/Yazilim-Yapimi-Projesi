@@ -58,11 +58,6 @@ namespace YY_proje
             grupfalse();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             sayac-=  1;
@@ -85,9 +80,9 @@ namespace YY_proje
 
         private void btnTestiBasla_Click(object sender, EventArgs e)
         {
-            
-            
-            if ((txtOgrenciAd.Text=="") || (txtOgrenciSoyad.Text==""))
+
+
+            if ((txtOgrenciAd.Text == "") || (txtOgrenciSoyad.Text == ""))
             {
                 MessageBox.Show("Lütfen Tüm Alanları Doldurunuz");
             }
@@ -98,6 +93,115 @@ namespace YY_proje
                 lblogrgörünenad.Text = txtOgrenciAd.Text;
                 lblogrgorunenSyad.Text = txtOgrenciSoyad.Text;
                 btnTestiBasla.Enabled = false;
+            }
+            {
+                Random rastgele = new Random();
+                int sayi = rastgele.Next(1, 13);
+                int sayi2 = rastgele.Next(1, 13);
+                int sayi3 = rastgele.Next(1, 13);
+                int sayi4 = rastgele.Next(1, 13);
+                lbldeneme.Text = Convert.ToString(sayi);
+                if (lbldeneme.Text == "") foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+                if (lbldeneme.Text == "") { pictureBox1.Image = null; }
+                connection.Open();
+                SqlCommand command = new SqlCommand("Select *from Sınav where SoruID like '" + lbldeneme.Text + "'", connection);
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    try
+                    {
+                        txtcvp1.Text = reader["A"].ToString();
+                        txtcvp2.Text = reader["B"].ToString();
+                        txtcvp3.Text = reader["C"].ToString();
+                        txtcvp4.Text = reader["D"].ToString();
+                        txtSoruMetnibir.Text = reader["SoruMetni"].ToString();
+                        txtSoruistenen1.Text = reader["Soruistenen"].ToString();
+                        pictureBox1.Image = Image.FromFile(reader["FilmResim"].ToString());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("hata");
+                    }
+
+
+                }
+                connection.Close();
+            
+                lbldeneme2.Text = Convert.ToString(sayi2);
+                if (lbldeneme2.Text == "") foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+                if (lbldeneme2.Text == "") { pictureBox2.Image = null; }
+                connection.Open();
+                SqlCommand command2 = new SqlCommand("Select *from Sınav where SoruID like '" + sayi2 + "'", connection);
+                SqlDataReader reader2 = command2.ExecuteReader();
+                while (reader2.Read())
+                {
+                    try
+                    {
+                        txtcvp1iki.Text = reader2["A"].ToString();
+                        txtcvp2iki.Text = reader2["B"].ToString();
+                        txtcvp3iki.Text = reader2["C"].ToString();
+                        txtcvp4iki.Text = reader2["D"].ToString();
+                        txtSoruMetniiki.Text = reader2["SoruMetni"].ToString();
+                        txtSoruistenen2.Text = reader2["Soruistenen"].ToString();
+                        pictureBox2.Image = Image.FromFile(reader2["FilmResim"].ToString());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("hata");
+                    }
+                }
+                connection.Close();
+
+                lbldeneme3.Text = Convert.ToString(sayi3);
+                if (lbldeneme3.Text == "") foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+                if (lbldeneme3.Text == "") { pictureBox3.Image = null; }
+                connection.Open();
+                SqlCommand command3 = new SqlCommand("Select *from Sınav where SoruID like '" + lbldeneme3.Text + "'", connection);
+                SqlDataReader reader3 = command3.ExecuteReader();
+                while (reader3.Read())
+                {
+                    try
+                    {
+                        txtcvp1uc.Text = reader3["A"].ToString();
+                        txtcvp2uc.Text = reader3["B"].ToString();
+                        txtcvp3uc.Text = reader3["C"].ToString();
+                        txtcvp4uc.Text = reader3["D"].ToString();
+                        txtSoruMetniuc.Text = reader3["SoruMetni"].ToString();
+                        txtSoruistenen3.Text = reader3["Soruistenen"].ToString();
+                        pictureBox3.Image = Image.FromFile(reader3["FilmResim"].ToString());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("hata");
+                    }
+                }
+                connection.Close();
+
+                lbldeneme4.Text = Convert.ToString(sayi4);
+                if (lbldeneme4.Text == "") foreach (Control item in Controls) if (item is TextBox) item.Text = "";
+                if (lbldeneme4.Text == "") { pictureBox4.Image = null; }
+                connection.Open();
+                SqlCommand command4 = new SqlCommand("Select *from Sınav where SoruID like '" + lbldeneme4.Text + "'", connection);
+                SqlDataReader reader4 = command4.ExecuteReader();
+                while (reader4.Read())
+                {
+                    try
+                    {
+                        txtcvp1dort.Text = reader4["A"].ToString();
+                        txtcvp2dort.Text = reader4["B"].ToString();
+                        txtcvp3dort.Text = reader4["C"].ToString();
+                        txtcvp4dort.Text = reader4["D"].ToString();
+                        txtSoruMetnidort.Text = reader4["SoruMetni"].ToString();
+                        txtSoruistenen4.Text = reader4["Soruistenen"].ToString();
+                        pictureBox4.Image = Image.FromFile(reader4["FilmResim"].ToString());
+                    }
+                    catch
+                    {
+                        Console.WriteLine("hata");
+                    }
+                }
+                connection.Close();
             }
         }
 
@@ -118,116 +222,5 @@ namespace YY_proje
             sonuclar(radioButton15);
         }
 
-        private void txtSoruIDGetir_TextChanged(object sender, EventArgs e)
-        {
-            if (txtSoruIDGetir.Text == "") foreach (Control item in Controls) if (item is TextBox) item.Text = "";
-            if (txtSoruIDGetir.Text == "") { pictureBox1.Image = null; }
-                connection.Open();
-            SqlCommand command = new SqlCommand("Select *from Sınav where SoruID like '" + txtSoruIDGetir.Text + "'", connection);
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-               
-              try
-                {
-                    txtcvp1.Text = reader["A"].ToString();
-                    txtcvp2.Text = reader["B"].ToString();
-                    txtcvp3.Text = reader["C"].ToString();
-                    txtcvp4.Text = reader["D"].ToString();
-                    txtSoruMetnibir.Text = reader["SoruMetni"].ToString();
-                    txtSoruistenen1.Text = reader["Soruistenen"].ToString();
-                    pictureBox1.Image = Image.FromFile(reader["FilmResim"].ToString());
-                }
-                catch
-                {
-                    Console.WriteLine("hata");
-                }
-                
-                
-            }
-            connection.Close();
-            
-        }
-
-        private void txtSoruIDGetir2_TextChanged(object sender, EventArgs e)
-        {
-            if (txtSoruIDGetir2.Text == "") foreach (Control item in Controls) if (item is TextBox) item.Text = "";
-            if (txtSoruIDGetir2.Text == "") { pictureBox2.Image = null; }
-            connection.Open();
-            SqlCommand command = new SqlCommand("Select *from Sınav where SoruID like '" + txtSoruIDGetir2.Text + "'", connection);
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                try
-                {
-                    txtcvp1iki.Text = reader["A"].ToString();
-                    txtcvp2iki.Text = reader["B"].ToString();
-                    txtcvp3iki.Text = reader["C"].ToString();
-                    txtcvp4iki.Text = reader["D"].ToString();
-                    txtSoruMetniiki.Text = reader["SoruMetni"].ToString();
-                    txtSoruistenen2.Text = reader["Soruistenen"].ToString();
-                    pictureBox2.Image = Image.FromFile(reader["FilmResim"].ToString());
-                }
-                catch
-                {
-                    Console.WriteLine("hata");
-                }
-            }
-            connection.Close();
-        }
-
-        private void txtSoruIDGetir3_TextChanged(object sender, EventArgs e)
-        {
-            if (txtSoruIDGetir3.Text == "") foreach (Control item in Controls) if (item is TextBox) item.Text = "";
-            if (txtSoruIDGetir3.Text == "") { pictureBox3.Image = null; }
-            connection.Open();
-            SqlCommand command = new SqlCommand("Select *from Sınav where SoruID like '" + txtSoruIDGetir3.Text + "'", connection);
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                try
-                {
-                    txtcvp1uc.Text = reader["A"].ToString(); 
-                    txtcvp2uc.Text = reader["B"].ToString();
-                    txtcvp3uc.Text = reader["C"].ToString();
-                    txtcvp4uc.Text = reader["D"].ToString();
-                    txtSoruMetniuc.Text = reader["SoruMetni"].ToString();
-                    txtSoruistenen3.Text = reader["Soruistenen"].ToString();
-                    pictureBox3.Image = Image.FromFile(reader["FilmResim"].ToString());
-                }
-                catch
-                {
-                    Console.WriteLine("hata");
-                }
-            }
-            connection.Close();
-        }
-
-        private void txtSoruIDGetir4_TextChanged(object sender, EventArgs e)
-        {
-            if (txtSoruIDGetir4.Text == "") foreach (Control item in Controls) if (item is TextBox) item.Text = "";
-            if (txtSoruIDGetir4.Text == "") { pictureBox4.Image = null; }
-            connection.Open();
-            SqlCommand command = new SqlCommand("Select *from Sınav where SoruID like '" + txtSoruIDGetir4.Text + "'", connection);
-            SqlDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                try
-                {
-                    txtcvp1dort.Text = reader["A"].ToString();
-                    txtcvp2dort.Text = reader["B"].ToString();
-                    txtcvp3dort.Text = reader["C"].ToString();
-                    txtcvp4dort.Text = reader["D"].ToString();
-                    txtSoruMetnidort.Text = reader["SoruMetni"].ToString();
-                    txtSoruistenen4.Text = reader["Soruistenen"].ToString();
-                    pictureBox4.Image = Image.FromFile(reader["FilmResim"].ToString());
-                }
-                catch
-                {
-                    Console.WriteLine("hata");
-                }
-            }
-            connection.Close();
-        }
     }
 }
